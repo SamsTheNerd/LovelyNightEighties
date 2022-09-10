@@ -28,7 +28,8 @@ Colors:
 
 ## Themes/Addons
 I've been slowly adding this theme to the apps I use, but I only use so many apps. If anyone ports it to other apps, let me know! I'll add links here. For now here's what we have:
-- [VS Code](https://github.com/SamsTheNerd/LovelyNightEighties/tree/main/lovelynighteighties_vscode) (Only really tested on Mac and not extensively, if there's any component I missed changing, let me know)
+- [VS Code](https://github.com/SamsTheNerd/LovelyNightEighties/tree/main/lovelynighteighties_vscode) (Only really tested on Mac and not extensively, if there's any component I missed changing, let me know) 
+    - install: put the lovelynighteighties_vscode folder into your installed extensions folder listed [here](https://code.visualstudio.com/docs/editor/extension-marketplace#_where-are-extensions-installed)
 - [iTerm2](https://github.com/SamsTheNerd/LovelyNightEighties/blob/main/lovelynighteighties_iterm2.json)
 - [MacOS Terminal Icon](https://github.com/SamsTheNerd/LovelyNightEighties/blob/main/macos_terminal_icon.png) - great for terminal or iTerm2
 
