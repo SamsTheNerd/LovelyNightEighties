@@ -1,0 +1,17 @@
+{        
+    "name": "theme-future-night-eighties",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": ">=0.9.0-pre.1"
+    },
+    "publisher": "SamsTheNerd",
+    "contributes": {
+        "themes": [
+            {
+                "label": "Lovely Night Eighties",
+                "uiTheme": "vs-dark",
+                "path": "./themes/FNE_P.json"
+            }
+        ]
+    }
+}
