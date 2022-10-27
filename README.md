@@ -12,7 +12,7 @@ White to Darkest Purple:
 3. #47366B
 4. #312152
 5. #1E1433
-6. 120C1F
+6. #120C1F
 
 Colors:
 - Red: #FF8C8E
