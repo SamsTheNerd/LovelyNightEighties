@@ -4,12 +4,12 @@ local LN8 = {}
 
 LN8.default = {
 	name = 'Lovely Night 80s',
-	base0 = "#D9D9D9",
-	base1 = "#857A46",
-	base2 = "#47366B",
-	base3 = "#312512",
-	base4 = "#1E1433",
-	base5 = "#120C1F",
+	base0 = '#D9D9D9',
+	base1 = '#857A46',
+	base2 = '#47366B',
+	base3 = '#312512',
+	base4 = '#1E1433',
+	base5 = '#120C1F',
 	red = '#FF8C8E',
 	orange = '#FFAC80',
 	yellow = '#FFEA80',
@@ -345,6 +345,253 @@ end
 
 LN8.load_plugin_syntax = function(palette)
 	return {
+	TSString = {
+      fg = palette.yellow,
+    },
+    TSInclude = {
+      fg = palette.pink,
+    },
+    TSVariable = {
+      fg = palette.white,
+    },
+    TSVariableBuiltin = {
+      fg = palette.orange,
+    },
+    TSAnnotation = {
+      fg = palette.green,
+    },
+    TSComment = {
+      fg = palette.base6,
+      style = 'italic',
+    },
+    TSConstant = {
+      fg = palette.aqua,
+    },
+    TSConstBuiltin = {
+      fg = palette.purple,
+    },
+    TSConstMacro = {
+      fg = palette.purple,
+    },
+    TSConstructor = {
+      fg = palette.aqua,
+    },
+    TSConditional = {
+      fg = palette.pink,
+    },
+    TSCharacter = {
+      fg = palette.yellow,
+    },
+    TSFunction = {
+      fg = palette.green,
+      style = 'italic',
+    },
+    TSFuncBuiltin = {
+      fg = palette.aqua,
+    },
+    TSFuncMacro = {
+      fg = palette.green,
+      style = 'italic',
+    },
+    TSKeyword = {
+      fg = palette.pink,
+      style = 'italic',
+    },
+    TSKeywordFunction = {
+      fg = palette.pink,
+      style = 'italic',
+    },
+    TSKeywordOperator = {
+      fg = palette.pink,
+    },
+    TSKeywordReturn = {
+      fg = palette.pink,
+    },
+    TSMethod = {
+      fg = palette.green,
+    },
+    TSNamespace = {
+      fg = palette.purple,
+    },
+    TSNumber = {
+      fg = palette.purple,
+    },
+    TSOperator = {
+      fg = palette.pink,
+    },
+    TSParameter = {
+      fg = palette.white,
+    },
+    TSParameterReference = {
+      fg = palette.white,
+    },
+    TSProperty = {
+      fg = palette.white,
+    },
+    TSPunctDelimiter = {
+      fg = palette.white,
+    },
+    TSPunctBracket = {
+      fg = palette.white,
+    },
+    TSPunctSpecial = {
+      fg = palette.pink,
+    },
+    TSRepeat = {
+      fg = palette.pink,
+    },
+    TSStringRegex = {
+      fg = palette.purple,
+    },
+    TSStringEscape = {
+      fg = palette.purple,
+    },
+    TSTag = {
+      fg = palette.pink,
+    },
+    TSTagDelimiter = {
+      fg = palette.white,
+    },
+    TSTagAttribute = {
+      fg = palette.green,
+    },
+    TSLabel = {
+      fg = palette.pink,
+    },
+    TSType = {
+      fg = palette.aqua,
+    },
+    TSException = {
+      fg = palette.pink,
+    },
+    TSField = {
+      fg = palette.white,
+    },
+    TSFloat = {
+      fg = palette.purple,
+    },
+    dbui_tables = {
+      fg = palette.white,
+    },
+    DiagnosticSignError = {
+      fg = palette.red,
+    },
+    DiagnosticSignWarn = {
+      fg = palette.yellow,
+    },
+    DiagnosticSignInfo = {
+      fg = palette.white,
+    },
+    DiagnosticSignHint = {
+      fg = palette.aqua,
+    },
+    DiagnosticVirtualTextError = {
+      fg = palette.red,
+    },
+    DiagnosticVirtualTextWarn = {
+      fg = palette.yellow,
+    },
+    DiagnosticVirtualTextInfo = {
+      fg = palette.white,
+    },
+    DiagnosticVirtualTextHint = {
+      fg = palette.aqua,
+    },
+    DiagnosticUnderlineError = {
+      style = 'undercurl',
+      sp = palette.red,
+    },
+    DiagnosticUnderlineWarn = {
+      style = 'undercurl',
+      sp = palette.yellow,
+    },
+    DiagnosticUnderlineInfo = {
+      style = 'undercurl',
+      sp = palette.white,
+    },
+    DiagnosticUnderlineHint = {
+      style = 'undercurl',
+      sp = palette.aqua,
+    },
+    CursorWord0 = {
+      bg = palette.white,
+      fg = palette.black,
+    },
+    CursorWord1 = {
+      bg = palette.white,
+      fg = palette.black,
+    },
+    NvimTreeFolderName = {
+      fg = palette.white,
+    },
+    NvimTreeRootFolder = {
+      fg = palette.pink,
+    },
+    NvimTreeSpecialFile = {
+      fg = palette.white,
+      style = 'NONE',
+    },
+
+    -- Telescope
+    TelescopeBorder = {
+      fg = palette.base7,
+    },
+    TelescopeNormal = {
+      fg = palette.base8,
+      bg = palette.base0,
+    },
+    TelescopeSelection = {
+      fg = palette.white,
+      style = 'bold',
+    },
+    TelescopeSelectionCaret = {
+      fg = palette.green,
+    },
+    TelescopeMultiSelection = {
+      fg = palette.pink,
+    },
+    TelescopeMatching = {
+      fg = palette.aqua,
+    },
+
+    -- hrsh7th/nvim-cmp
+    CmpDocumentation = { fg = palette.white, bg = palette.base1 },
+    CmpDocumentationBorder = { fg = palette.white, bg = palette.base1 },
+
+    CmpItemAbbr = { fg = palette.white },
+    CmpItemAbbrMatch = { fg = palette.aqua },
+    CmpItemAbbrMatchFuzzy = { fg = palette.aqua },
+
+    CmpItemKindDefault = { fg = palette.white },
+    CmpItemMenu = { fg = palette.base6 },
+
+    CmpItemKindKeyword = { fg = palette.pink },
+    CmpItemKindVariable = { fg = palette.pink },
+    CmpItemKindConstant = { fg = palette.pink },
+    CmpItemKindReference = { fg = palette.pink },
+    CmpItemKindValue = { fg = palette.pink },
+
+    CmpItemKindFunction = { fg = palette.aqua },
+    CmpItemKindMethod = { fg = palette.aqua },
+    CmpItemKindConstructor = { fg = palette.aqua },
+
+    CmpItemKindClass = { fg = palette.orange },
+    CmpItemKindInterface = { fg = palette.orange },
+    CmpItemKindStruct = { fg = palette.orange },
+    CmpItemKindEvent = { fg = palette.orange },
+    CmpItemKindEnum = { fg = palette.orange },
+    CmpItemKindUnit = { fg = palette.orange },
+
+    CmpItemKindModule = { fg = palette.yellow },
+
+    CmpItemKindProperty = { fg = palette.green },
+    CmpItemKindField = { fg = palette.green },
+    CmpItemKindTypeParameter = { fg = palette.green },
+    CmpItemKindEnumMember = { fg = palette.green },
+    CmpItemKindOperator = { fg = palette.green },
+
+    -- ray-x/lsp_signature.nvim
+    LspSignatureActiveParameter = { fg = palette.orange },
 	}
 end
 
