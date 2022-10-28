@@ -5,9 +5,9 @@ local LN8 = {}
 LN8.default = {
 	name = 'Lovely Night 80s',
 	base0 = '#D9D9D9',
-	base1 = '#857A46',
+	base1 = '#8574A6',
 	base2 = '#47366B',
-	base3 = '#312512',
+	base3 = '#312152',
 	base4 = '#1E1433',
 	base5 = '#120C1F',
 	red = '#FF8C8E',
@@ -17,13 +17,18 @@ LN8.default = {
 	cyan = '#73E5E5',
 	blue = '#7399E5',
 	pink = '#E391E5',
-
+	highlight = '#493280',
+	diff_add = '#3d5213',
+	diff_remove = '#4a0f23',
+	diff_change = '#27406b',
+	diff_text = '#23324d',
 }
 
 local function remove_italics(config, colors)
 	if not config.italics and colors.style == "italic" then
 		colors.style = nil
 	end
+	return colors
 end
 
 local function highlighter(config)
@@ -41,13 +46,13 @@ LN8.load_syntax = function(palette)
 	return {
 	Normal = {
       fg = palette.base0,
-      bg = palette.base2,
+      bg = palette.base5,
     },
     NormalFloat = {
       bg = palette.base1,
     },
     Pmenu = {
-      fg = palette.white,
+      fg = palette.base0,
       bg = palette.base3,
     },
     PmenuSel = {
@@ -59,8 +64,8 @@ LN8.load_syntax = function(palette)
       bg = palette.orange,
     },
     PmenuThumb = {
-      fg = palette.purple,
-      bg = palette.green,
+      fg = palette.pink,
+      bg = palette.blue,
     },
     PmenuSbar = {
       bg = palette.base3,
@@ -69,10 +74,10 @@ LN8.load_syntax = function(palette)
       style = 'reverse',
     },
     ColorColumn = {
-      bg = palette.base3,
+      bg = palette.base1,
     },
     CursorLine = {
-      bg = palette.base3,
+      bg = palette.base2,
     },
     NonText = { -- used for "eol", "extends" and "precedes" in listchars
       fg = palette.base5,
@@ -92,8 +97,8 @@ LN8.load_syntax = function(palette)
       bg = palette.orange,
     },
     CursorLineNr = {
-      fg = palette.orange,
-      bg = palette.base2,
+      fg = palette.base0,
+      bg = palette.base5,
     },
     MatchParen = {
       fg = palette.pink,
@@ -102,11 +107,11 @@ LN8.load_syntax = function(palette)
       fg = palette.yellow,
     },
     ModeMsg = {
-      fg = palette.white,
+      fg = palette.base0,
       style = 'bold',
     },
     MoreMsg = {
-      fg = palette.white,
+      fg = palette.base0,
       style = 'bold',
     },
     ErrorMsg = {
@@ -118,22 +123,22 @@ LN8.load_syntax = function(palette)
       style = 'bold',
     },
     VertSplit = {
-      fg = palette.brown,
+      fg = palette.red,
     },
     LineNr = {
-      fg = palette.base5,
-      bg = palette.base2,
+      fg = palette.base2,
+      bg = palette.base5,
     },
     SignColumn = {
-      fg = palette.white,
-      bg = palette.base2,
+      fg = palette.base0,
+      bg = palette.base5,
     },
     StatusLine = {
-      fg = palette.base7,
+      fg = palette.base3,
       bg = palette.base3,
     },
     StatusLineNC = {
-      fg = palette.grey,
+      fg = palette.base1,
       bg = palette.base3,
     },
     Tabline = {},
@@ -146,11 +151,11 @@ LN8.load_syntax = function(palette)
       style = 'undercurl',
     },
     SpellCap = {
-      fg = palette.purple,
+      fg = palette.pink,
       style = 'undercurl',
     },
     SpellRare = {
-      fg = palette.aqua,
+      fg = palette.cyan,
       style = 'undercurl',
     },
     SpellLocal = {
@@ -165,19 +170,19 @@ LN8.load_syntax = function(palette)
       style = 'bold',
     },
     Directory = {
-      fg = palette.aqua,
+      fg = palette.cyan,
     },
     DiffAdd = {
-      bg = palette.diff_add,
+      bg = palette.red,
     },
     DiffDelete = {
-      bg = palette.diff_remove,
+      bg = palette.red,
     },
     DiffChange = {
-      bg = palette.diff_change,
+      bg = palette.red,
     },
     DiffText = {
-      bg = palette.diff_text,
+      bg = palette.red,
     },
     diffAdded = {
       fg = palette.green,
@@ -186,55 +191,55 @@ LN8.load_syntax = function(palette)
       fg = palette.pink,
     },
     Folded = {
-      fg = palette.grey,
+      fg = palette.base1,
       bg = palette.base3,
     },
     FoldColumn = {
-      fg = palette.white,
-      bg = palette.black,
+      fg = palette.base0,
+      bg = palette.base5,
     },
     Constant = {
-      fg = palette.aqua,
+      fg = palette.cyan,
     },
     Number = {
-      fg = palette.purple,
+      fg = palette.orange,
     },
     Float = {
-      fg = palette.purple,
+      fg = palette.orange,
     },
     Boolean = {
-      fg = palette.purple,
+      fg = palette.orange,
     },
     Character = {
-      fg = palette.yellow,
+      fg = palette.green,
     },
     String = {
-      fg = palette.yellow,
+      fg = palette.green,
     },
     Type = {
-      fg = palette.aqua,
+      fg = palette.yellow,
     },
     Structure = {
-      fg = palette.aqua,
+      fg = palette.yellow,
     },
     StorageClass = {
-      fg = palette.aqua,
+      fg = palette.cyan,
     },
     Typedef = {
-      fg = palette.aqua,
+      fg = palette.cyan,
     },
     Identifier = {
-      fg = palette.white,
+      fg = palette.base0,
     },
     Function = {
-      fg = palette.green,
+      fg = palette.blue,
       style = 'italic',
     },
     Statement = {
       fg = palette.pink,
     },
     Operator = {
-      fg = palette.pink,
+      fg = palette.cyan,
     },
     Label = {
       fg = palette.pink,
@@ -244,7 +249,7 @@ LN8.load_syntax = function(palette)
       style = 'italic',
     },
     PreProc = {
-      fg = palette.green,
+      fg = palette.pink,
     },
     Include = {
       fg = palette.pink,
@@ -259,16 +264,16 @@ LN8.load_syntax = function(palette)
       fg = palette.pink,
     },
     Special = {
-      fg = palette.white,
+      fg = palette.base0,
     },
     SpecialChar = {
       fg = palette.pink,
     },
     Delimiter = {
-      fg = palette.white,
+      fg = palette.base0,
     },
     SpecialComment = {
-      fg = palette.grey,
+      fg = palette.base1,
       style = 'italic',
     },
     Tag = {
@@ -278,7 +283,7 @@ LN8.load_syntax = function(palette)
       fg = palette.orange,
     },
     Comment = {
-      fg = palette.base6,
+      fg = palette.base1,
       style = 'italic',
     },
     Underlined = {
@@ -289,14 +294,14 @@ LN8.load_syntax = function(palette)
       fg = palette.red,
     },
     Terminal = {
-      fg = palette.white,
+      fg = palette.base0,
       bg = palette.base2,
     },
     EndOfBuffer = {
       fg = palette.base2,
     },
     Conceal = {
-      fg = palette.grey,
+      fg = palette.base1,
     },
     vCursor = {
       style = 'reverse',
@@ -311,17 +316,17 @@ LN8.load_syntax = function(palette)
       style = 'reverse',
     },
     CursorColumn = {
-      bg = palette.base3,
+      bg = palette.base2,
     },
     Whitespace = { -- used for "nbsp", "space", "tab" and "trail" in listchars
       fg = palette.base5,
     },
     WildMenu = {
-      fg = palette.white,
+      fg = palette.base0,
       bg = palette.orange,
     },
     QuickFixLine = {
-      fg = palette.purple,
+      fg = palette.pink,
       style = 'bold',
     },
     Debug = {
@@ -346,13 +351,13 @@ end
 LN8.load_plugin_syntax = function(palette)
 	return {
 	TSString = {
-      fg = palette.yellow,
+      fg = palette.green,
     },
     TSInclude = {
       fg = palette.pink,
     },
     TSVariable = {
-      fg = palette.white,
+      fg = palette.base0,
     },
     TSVariableBuiltin = {
       fg = palette.orange,
@@ -361,33 +366,33 @@ LN8.load_plugin_syntax = function(palette)
       fg = palette.green,
     },
     TSComment = {
-      fg = palette.base6,
+      fg = palette.base1,
       style = 'italic',
     },
     TSConstant = {
-      fg = palette.aqua,
+      fg = palette.cyan,
     },
     TSConstBuiltin = {
-      fg = palette.purple,
+      fg = palette.pink,
     },
     TSConstMacro = {
-      fg = palette.purple,
+      fg = palette.pink,
     },
     TSConstructor = {
-      fg = palette.aqua,
+      fg = palette.cyan,
     },
     TSConditional = {
       fg = palette.pink,
     },
     TSCharacter = {
-      fg = palette.yellow,
+      fg = palette.green,
     },
     TSFunction = {
-      fg = palette.green,
+      fg = palette.blue,
       style = 'italic',
     },
     TSFuncBuiltin = {
-      fg = palette.aqua,
+      fg = palette.cyan,
     },
     TSFuncMacro = {
       fg = palette.green,
@@ -411,28 +416,28 @@ LN8.load_plugin_syntax = function(palette)
       fg = palette.green,
     },
     TSNamespace = {
-      fg = palette.purple,
+      fg = palette.pink,
     },
     TSNumber = {
-      fg = palette.purple,
+      fg = palette.pink,
     },
     TSOperator = {
       fg = palette.pink,
     },
     TSParameter = {
-      fg = palette.white,
+      fg = palette.base0,
     },
     TSParameterReference = {
-      fg = palette.white,
+      fg = palette.base0,
     },
     TSProperty = {
-      fg = palette.white,
+      fg = palette.base0,
     },
     TSPunctDelimiter = {
-      fg = palette.white,
+      fg = palette.base0,
     },
     TSPunctBracket = {
-      fg = palette.white,
+      fg = palette.base0,
     },
     TSPunctSpecial = {
       fg = palette.pink,
@@ -441,16 +446,16 @@ LN8.load_plugin_syntax = function(palette)
       fg = palette.pink,
     },
     TSStringRegex = {
-      fg = palette.purple,
+      fg = palette.pink,
     },
     TSStringEscape = {
-      fg = palette.purple,
+      fg = palette.pink,
     },
     TSTag = {
       fg = palette.pink,
     },
     TSTagDelimiter = {
-      fg = palette.white,
+      fg = palette.base0,
     },
     TSTagAttribute = {
       fg = palette.green,
@@ -459,19 +464,19 @@ LN8.load_plugin_syntax = function(palette)
       fg = palette.pink,
     },
     TSType = {
-      fg = palette.aqua,
+      fg = palette.cyan,
     },
     TSException = {
       fg = palette.pink,
     },
     TSField = {
-      fg = palette.white,
+      fg = palette.base0,
     },
     TSFloat = {
-      fg = palette.purple,
+      fg = palette.pink,
     },
     dbui_tables = {
-      fg = palette.white,
+      fg = palette.base0,
     },
     DiagnosticSignError = {
       fg = palette.red,
@@ -480,10 +485,10 @@ LN8.load_plugin_syntax = function(palette)
       fg = palette.yellow,
     },
     DiagnosticSignInfo = {
-      fg = palette.white,
+      fg = palette.base0,
     },
     DiagnosticSignHint = {
-      fg = palette.aqua,
+      fg = palette.cyan,
     },
     DiagnosticVirtualTextError = {
       fg = palette.red,
@@ -492,10 +497,10 @@ LN8.load_plugin_syntax = function(palette)
       fg = palette.yellow,
     },
     DiagnosticVirtualTextInfo = {
-      fg = palette.white,
+      fg = palette.base0,
     },
     DiagnosticVirtualTextHint = {
-      fg = palette.aqua,
+      fg = palette.cyan,
     },
     DiagnosticUnderlineError = {
       style = 'undercurl',
@@ -507,41 +512,41 @@ LN8.load_plugin_syntax = function(palette)
     },
     DiagnosticUnderlineInfo = {
       style = 'undercurl',
-      sp = palette.white,
+      sp = palette.base0,
     },
     DiagnosticUnderlineHint = {
       style = 'undercurl',
-      sp = palette.aqua,
+      sp = palette.cyan,
     },
     CursorWord0 = {
-      bg = palette.white,
-      fg = palette.black,
+      bg = palette.base0,
+      fg = palette.base5,
     },
     CursorWord1 = {
-      bg = palette.white,
-      fg = palette.black,
+      bg = palette.base0,
+      fg = palette.base5,
     },
     NvimTreeFolderName = {
-      fg = palette.white,
+      fg = palette.base0,
     },
     NvimTreeRootFolder = {
       fg = palette.pink,
     },
     NvimTreeSpecialFile = {
-      fg = palette.white,
+      fg = palette.base0,
       style = 'NONE',
     },
 
     -- Telescope
     TelescopeBorder = {
-      fg = palette.base7,
+      fg = palette.base3,
     },
     TelescopeNormal = {
-      fg = palette.base8,
+      fg = palette.base0,
       bg = palette.base0,
     },
     TelescopeSelection = {
-      fg = palette.white,
+      fg = palette.base0,
       style = 'bold',
     },
     TelescopeSelectionCaret = {
@@ -551,19 +556,19 @@ LN8.load_plugin_syntax = function(palette)
       fg = palette.pink,
     },
     TelescopeMatching = {
-      fg = palette.aqua,
+      fg = palette.cyan,
     },
 
     -- hrsh7th/nvim-cmp
-    CmpDocumentation = { fg = palette.white, bg = palette.base1 },
-    CmpDocumentationBorder = { fg = palette.white, bg = palette.base1 },
+    CmpDocumentation = { fg = palette.base0, bg = palette.base1 },
+    CmpDocumentationBorder = { fg = palette.base0, bg = palette.base1 },
 
-    CmpItemAbbr = { fg = palette.white },
-    CmpItemAbbrMatch = { fg = palette.aqua },
-    CmpItemAbbrMatchFuzzy = { fg = palette.aqua },
+    CmpItemAbbr = { fg = palette.base0 },
+    CmpItemAbbrMatch = { fg = palette.cyan },
+    CmpItemAbbrMatchFuzzy = { fg = palette.cyan },
 
-    CmpItemKindDefault = { fg = palette.white },
-    CmpItemMenu = { fg = palette.base6 },
+    CmpItemKindDefault = { fg = palette.base0 },
+    CmpItemMenu = { fg = palette.base1 },
 
     CmpItemKindKeyword = { fg = palette.pink },
     CmpItemKindVariable = { fg = palette.pink },
@@ -571,9 +576,9 @@ LN8.load_plugin_syntax = function(palette)
     CmpItemKindReference = { fg = palette.pink },
     CmpItemKindValue = { fg = palette.pink },
 
-    CmpItemKindFunction = { fg = palette.aqua },
-    CmpItemKindMethod = { fg = palette.aqua },
-    CmpItemKindConstructor = { fg = palette.aqua },
+    CmpItemKindFunction = { fg = palette.cyan },
+    CmpItemKindMethod = { fg = palette.cyan },
+    CmpItemKindConstructor = { fg = palette.cyan },
 
     CmpItemKindClass = { fg = palette.orange },
     CmpItemKindInterface = { fg = palette.orange },
