@@ -613,12 +613,12 @@ LN8.setup = function(config)
 
 	local used_palette = config.palette or LN8.default
 	vim.g.colors_name = used_palette.name
-	
+
 	local syntax = LN8.load_syntax(used_palette)
 	syntax = vim.tbl_deep_extend('keep', config.custom_hlgroups, syntax)
-	
+
 	local highlight = highlighter(config)
-	
+
 	for group, colors in pairs(syntax) do
 		highlight(group, colors)
 	end
@@ -629,3 +629,5 @@ LN8.setup = function(config)
 		highlight(group, colors)
 	end
 end
+
+return LN8
