@@ -217,13 +217,13 @@ LN8.load_syntax = function(palette)
       fg = palette.green,
     },
     Type = {
-      fg = palette.yellow,
+      fg = palette.pink,
     },
     Structure = {
       fg = palette.yellow,
     },
     StorageClass = {
-      fg = palette.cyan,
+      fg = palette.pink,
     },
     Typedef = {
       fg = palette.cyan,
@@ -357,7 +357,7 @@ LN8.load_plugin_syntax = function(palette)
       fg = palette.pink,
     },
     TSVariable = {
-      fg = palette.base0,
+      fg = palette.orange,
     },
     TSVariableBuiltin = {
       fg = palette.orange,
