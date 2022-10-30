@@ -77,13 +77,13 @@ LN8.load_syntax = function(palette)
       bg = palette.base1,
     },
     CursorLine = {
-      bg = palette.base2,
+      bg = palette.base3,
     },
     NonText = { -- used for "eol", "extends" and "precedes" in listchars
       fg = palette.base5,
     },
     Visual = {
-      bg = palette.base2,
+      bg = palette.base3,
     },
     VisualNOS = {
       bg = palette.base3,
@@ -316,7 +316,7 @@ LN8.load_syntax = function(palette)
       style = 'reverse',
     },
     CursorColumn = {
-      bg = palette.base2,
+      bg = palette.base3,
     },
     Whitespace = { -- used for "nbsp", "space", "tab" and "trail" in listchars
       fg = palette.base5,
