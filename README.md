@@ -29,7 +29,7 @@ Colors:
 ## Themes/Addons
 I've been slowly adding this theme to the apps I use, but I only use so many apps. If anyone ports it to other apps, let me know! I'll add links here. For now here's what we have:
 - [VS Code](https://github.com/SamsTheNerd/LovelyNightEighties/tree/main/vscode) (Only really tested on Mac and not extensively, if there's any component I missed changing, let me know) 
-    - To install: put the lovelynighteighties_vscode folder into your installed extensions folder listed [here](https://code.visualstudio.com/docs/editor/extension-marketplace#_where-are-extensions-installed)
+    - To install: put the theme-lovely-night-eighties folder into your installed extensions folder listed [here](https://code.visualstudio.com/docs/editor/extension-marketplace#_where-are-extensions-installed)
 - [iTerm2](https://github.com/SamsTheNerd/LovelyNightEighties/blob/main/iterm2/lovelynighteighties_iterm2.json)
 - [MacOS Terminal Icon](https://github.com/SamsTheNerd/LovelyNightEighties/blob/main/macos_terminal_icon.png) - great for terminal or iTerm2
 - [NeoVim](https://github.com/SamsTheNerd/LovelyNightEighties/tree/main/nvim) - Not extensively tested. To install use your plugin manager of choice. A few have been detailed for examples below:
@@ -42,7 +42,7 @@ I've been slowly adding this theme to the apps I use, but I only use so many app
 	| [minpac](https://github.com/k-takata/minpac/) | `call minpac#add('SamsTheNerd/LovelyNightEighties', {'subdir': 'nvim'})` |
 	| [Packer](https://github.com/wbthomason/packer.nvim) | `use {'tanvirtin/monokai.nvim', rtp = 'nvim'}` |
 
-- [vim-airline](https://github.com/WitherKNyx/LovelyNightEighties/tree/main/vim-airline-themes) - Complements the NeoVim theme very nicely!
+- [vim-airline](https://github.com/SamsTheNerd/LovelyNightEighties/tree/main/vim-airline-themes) - Complements the NeoVim theme very nicely!
 	- To install, simply copy the contents of the `vim-airline-themes` into your `vim-airline-themes/` directory.
 
 ---
@@ -56,7 +56,7 @@ iTerm2:
 ![Screenshot of a fish shell with neofetch startup to show off the colors](https://github.com/SamsTheNerd/LovelyNightEighties/blob/main/images/iTerm2_Sample.png?raw=true)
 
 NeoVim + vim-airline:
-![Screenshot of some Minecraft mod code in VS Code to show off the theme](https://github.com/WitherKNyx/LovelyNightEighties/blob/main/images/NeoVim_Sample.png?raw=true)
+![Screenshot of some Minecraft mod code in VS Code to show off the theme](https://github.com/SamsTheNerd/LovelyNightEighties/blob/main/images/NeoVim_Sample.png?raw=true)
 
 ---
 
