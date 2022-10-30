@@ -425,7 +425,7 @@ LN8.load_plugin_syntax = function(palette)
       fg = palette.pink,
     },
     TSParameter = {
-      fg = palette.base0,
+      fg = palette.orange,
     },
     TSParameterReference = {
       fg = palette.base0,
@@ -437,7 +437,7 @@ LN8.load_plugin_syntax = function(palette)
       fg = palette.base0,
     },
     TSPunctBracket = {
-      fg = palette.base0,
+      fg = palette.pink,
     },
     TSPunctSpecial = {
       fg = palette.pink,
