@@ -298,7 +298,7 @@ LN8.load_syntax = function(palette)
       bg = palette.base2,
     },
     EndOfBuffer = {
-      fg = palette.base2,
+      fg = palette.base5,
     },
     Conceal = {
       fg = palette.base1,
